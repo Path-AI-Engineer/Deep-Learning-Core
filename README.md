@@ -174,7 +174,7 @@ Ejemplo:
 
 | Semana | Proyecto                                   | Objetivo                                             |
 | ------ | ------------------------------------------ | ---------------------------------------------------- |
-| 28-30  | `07-neural-network-from-scratch-lab`       | Entender una red neuronal sin framework pesado       |
+| 28-30  | `07-neural-network-foundations-lab`        | Entender una red neuronal sin framework pesado       |
 | 31-33  | `08-pytorch-regression-classification-api` | Usar PyTorch para regresión y clasificación          |
 | 34-37  | `09-cnn-foundations-image-classifier`      | Construir una CNN básica para imágenes               |
 | 38-40  | `10-sequence-models-rnn-lstm-lab`          | Entender modelos secuenciales                        |
@@ -191,7 +191,7 @@ Duración total aproximada:
 
 # 📁 Proyectos del Plan 2
 
-## 07 — neural-network-from-scratch-lab
+## 07 — neural-network-foundations-lab
 
 ### Objetivo
 
