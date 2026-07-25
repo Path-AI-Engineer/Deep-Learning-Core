@@ -1,0 +1,14 @@
+dataset: xor
+network:
+  input_features: 2
+  hidden_units: 4
+  output_units: 1
+  hidden_activation: tanh
+  output_activation: sigmoid
+  initialization: xavier
+loss: binary_cross_entropy
+learning_rate: 0.5
+epochs: 3000
+seed: 7
+grid_resolution: 40
+

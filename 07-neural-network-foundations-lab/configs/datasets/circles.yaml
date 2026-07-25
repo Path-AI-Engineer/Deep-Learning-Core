@@ -1,0 +1,5 @@
+name: circles
+description: Noisy concentric circles for a nonlinear 2D decision boundary.
+seed: 17
+samples: 160
+

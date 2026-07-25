@@ -1,0 +1,19 @@
+{
+  "forward_max_absolute_error": 5.551115123125783e-17,
+  "gradient_max_absolute_error": {
+    "hidden.bias": 1.3877787807814457e-17,
+    "hidden.weights": 1.3877787807814457e-17,
+    "output.bias": 2.7755575615628914e-17,
+    "output.weights": 6.938893903907228e-18
+  },
+  "input_gradient_max_absolute_error": 1.3877787807814457e-17,
+  "loss_absolute_error": 0.0,
+  "passed": true,
+  "tolerance": 1e-08,
+  "update_max_absolute_error": {
+    "hidden.bias": 6.938893903907228e-18,
+    "hidden.weights": 3.469446951953614e-18,
+    "output.bias": 1.3877787807814457e-17,
+    "output.weights": 0.0
+  }
+}

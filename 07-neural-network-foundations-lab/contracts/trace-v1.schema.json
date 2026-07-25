@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://path-ai-engineer.dev/contracts/neural-network-foundations/trace-v1.schema.json",
+  "title": "Neural Network Foundations Execution Trace v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "dataset",
+    "sample_index",
+    "target",
+    "prediction",
+    "loss_name",
+    "loss",
+    "configuration",
+    "nodes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dataset": {
+      "enum": ["and", "or", "xor", "circles"]
+    },
+    "sample_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "target": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "prediction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "loss_name": {
+      "enum": ["binary_cross_entropy", "mean_squared_error"]
+    },
+    "loss": {
+      "type": "number",
+      "minimum": 0
+    },
+    "configuration": {
+      "type": "object"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 9,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    }
+  },
+  "$defs": {
+    "nullableNumber": {
+      "type": ["number", "null"]
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "layer_id",
+        "neuron_id",
+        "inputs",
+        "weights",
+        "bias",
+        "z",
+        "activation_name",
+        "activation_value",
+        "upstream_gradient",
+        "local_gradient",
+        "parameter_gradients"
+      ],
+      "properties": {
+        "layer_id": {
+          "enum": ["hidden", "output"]
+        },
+        "neuron_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "number"
+          }
+        },
+        "weights": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "number"
+          }
+        },
+        "bias": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "activation_name": {
+          "enum": ["sigmoid", "tanh", "relu"]
+        },
+        "activation_value": {
+          "type": "number"
+        },
+        "upstream_gradient": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "local_gradient": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "parameter_gradients": {
+          "type": ["object", "null"]
+        }
+      }
+    }
+  }
+}

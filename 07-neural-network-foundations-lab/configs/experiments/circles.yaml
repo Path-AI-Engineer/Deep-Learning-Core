@@ -1,0 +1,14 @@
+dataset: circles
+network:
+  input_features: 2
+  hidden_units: 8
+  output_units: 1
+  hidden_activation: tanh
+  output_activation: sigmoid
+  initialization: xavier
+loss: binary_cross_entropy
+learning_rate: 0.2
+epochs: 3000
+seed: 17
+grid_resolution: 50
+

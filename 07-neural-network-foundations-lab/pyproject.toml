@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools==75.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural-network-foundations"
+version = "0.1.0"
+description = "Inspectable neural-network mechanics implemented from first principles with NumPy."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy==1.26.4",
+  "PyYAML==6.0.1",
+  "streamlit==1.37.1",
+]
+
+[project.optional-dependencies]
+parity = ["torch==2.9.0"]
+dev = [
+  "mypy==1.11.2",
+  "pytest==7.4.4",
+  "ruff==0.6.5",
+  "types-PyYAML==6.0.12.20240917",
+  "jsonschema==4.23.0",
+]
+
+[project.scripts]
+nn-foundations-run = "neural_network_foundations.experiments.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["neural_network_foundations"]
+mypy_path = "src"
+ignore_missing_imports = true
+check_untyped_defs = true
+no_implicit_optional = true

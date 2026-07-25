@@ -1,0 +1,187 @@
+{
+  "configuration": {
+    "dataset": "xor",
+    "epochs": 3000,
+    "grid_resolution": 40,
+    "learning_rate": 0.5,
+    "loss": "binary_cross_entropy",
+    "network": {
+      "hidden_activation": "tanh",
+      "hidden_units": 4,
+      "initialization": "xavier",
+      "input_features": 2,
+      "output_activation": "sigmoid",
+      "output_units": 1
+    },
+    "schema_version": "1.0",
+    "seed": 7
+  },
+  "dataset": "xor",
+  "generated_at": "2026-07-24T23:09:51.450853+00:00",
+  "loss": 0.4971051402621797,
+  "loss_name": "binary_cross_entropy",
+  "nodes": [
+    {
+      "activation_name": "tanh",
+      "activation_value": -0.25663639358515916,
+      "bias": 0.0,
+      "inputs": [
+        0.0,
+        1.0
+      ],
+      "layer_id": "hidden",
+      "local_gradient": 0.9341377614876033,
+      "neuron_id": "hidden-0",
+      "parameter_gradients": {
+        "batch_bias": -0.008057621887323216,
+        "batch_weights": [
+          0.0023777332723326633,
+          -0.012372276474781528
+        ],
+        "sample_bias": 0.02847698678544719,
+        "sample_weights": [
+          0.0,
+          0.02847698678544719
+        ]
+      },
+      "upstream_gradient": 0.03048478282271549,
+      "weights": [
+        0.0007102293720870861,
+        -0.2625043002115525
+      ],
+      "z": -0.2625043002115525
+    },
+    {
+      "activation_name": "tanh",
+      "activation_value": -0.5172129982933709,
+      "bias": 0.0,
+      "inputs": [
+        0.0,
+        1.0
+      ],
+      "layer_id": "hidden",
+      "local_gradient": 0.7324907143963815,
+      "neuron_id": "hidden-1",
+      "parameter_gradients": {
+        "batch_bias": -0.015149897102115867,
+        "batch_weights": [
+          0.005754008146821393,
+          -0.01899947587633417
+        ],
+        "sample_bias": 0.028148942610958006,
+        "sample_weights": [
+          0.0,
+          0.028148942610958006
+        ]
+      },
+      "upstream_gradient": 0.038429077744902895,
+      "weights": [
+        0.17248081649971453,
+        -0.5725274054681726
+      ],
+      "z": -0.5725274054681726
+    },
+    {
+      "activation_name": "tanh",
+      "activation_value": 0.03470997574186378,
+      "bias": 0.0,
+      "inputs": [
+        0.0,
+        1.0
+      ],
+      "layer_id": "hidden",
+      "local_gradient": 0.9987952175839993,
+      "neuron_id": "hidden-2",
+      "parameter_gradients": {
+        "batch_bias": 0.009310283835027293,
+        "batch_weights": [
+          0.0008866580376466551,
+          0.012544320910926658
+        ],
+        "sample_bias": -0.030301788510412625,
+        "sample_weights": [
+          -0.0,
+          -0.030301788510412625
+        ]
+      },
+      "upstream_gradient": -0.030338339608503608,
+      "weights": [
+        -0.158273564588443,
+        0.034723925149664985
+      ],
+      "z": 0.034723925149664985
+    },
+    {
+      "activation_name": "tanh",
+      "activation_value": 0.6491183968565116,
+      "bias": 0.0,
+      "inputs": [
+        0.0,
+        1.0
+      ],
+      "layer_id": "hidden",
+      "local_gradient": 0.5786453068624322,
+      "neuron_id": "hidden-3",
+      "parameter_gradients": {
+        "batch_bias": 0.02075158693869414,
+        "batch_weights": [
+          0.00532743821494381,
+          0.01686186546855685
+        ],
+        "sample_bias": -0.012790246603971924,
+        "sample_weights": [
+          -0.0,
+          -0.012790246603971924
+        ]
+      },
+      "upstream_gradient": -0.022103776618052986,
+      "weights": [
+        -0.514183437844596,
+        0.7737736327929503
+      ],
+      "z": 0.7737736327929503
+    },
+    {
+      "activation_name": "sigmoid",
+      "activation_value": 0.608289024781354,
+      "bias": 0.0,
+      "inputs": [
+        -0.25663639358515916,
+        -0.5172129982933709,
+        0.03470997574186378,
+        0.6491183968565116
+      ],
+      "layer_id": "output",
+      "local_gradient": 0.2382734871119033,
+      "neuron_id": "output-0",
+      "parameter_gradients": {
+        "batch_bias": 0.02863487732606787,
+        "batch_weights": [
+          -0.010911236447021157,
+          -0.02642562994903865,
+          0.001135682922735349,
+          0.03779681045834546
+        ],
+        "sample_bias": -0.09792774380466149,
+        "sample_weights": [
+          0.02513182300195974,
+          0.05064950198931404,
+          -0.0033990696119152518,
+          -0.06356670006625706
+        ]
+      },
+      "upstream_gradient": -0.41098883888273513,
+      "weights": [
+        -0.31129873556082455,
+        -0.39242278287916216,
+        0.3098033144623461,
+        0.22571516262177804
+      ],
+      "z": 0.4401258789905025
+    }
+  ],
+  "prediction": 0.608289024781354,
+  "sample_index": 1,
+  "schema_version": "1.0",
+  "target": 1.0
+}

@@ -1,0 +1,73 @@
+{
+  "limitations": [
+    "XOR contains four pedagogical observations.",
+    "Passing parity covers the approved MLP, not every PyTorch feature.",
+    "Training accuracy is not a generalization claim."
+  ],
+  "status": "passed",
+  "tests": {
+    "checkpoint_reconstruction": true,
+    "circles_accuracy": 1.0,
+    "circles_final_loss": 0.017292232647759344,
+    "circles_initial_loss": 0.6873482329017356,
+    "final_loss": 0.0014578568614816842,
+    "gradient_check": {
+      "absolute_tolerance": 1e-06,
+      "epsilon": 1e-06,
+      "parameters": [
+        {
+          "checked_values": 8,
+          "max_absolute_error": 1.1544871308943883e-10,
+          "max_relative_error": 5.5350930147477967e-08,
+          "parameter": "hidden.weights",
+          "passed": true
+        },
+        {
+          "checked_values": 4,
+          "max_absolute_error": 9.766799174970586e-11,
+          "max_relative_error": 5.2451672241168895e-09,
+          "parameter": "hidden.bias",
+          "passed": true
+        },
+        {
+          "checked_values": 4,
+          "max_absolute_error": 7.839154672617532e-11,
+          "max_relative_error": 6.096009511395818e-09,
+          "parameter": "output.weights",
+          "passed": true
+        },
+        {
+          "checked_values": 1,
+          "max_absolute_error": 3.2090080592794834e-11,
+          "max_relative_error": 5.603320770227363e-10,
+          "parameter": "output.bias",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "relative_tolerance": 0.0001
+    },
+    "initial_loss": 0.7064392381334463,
+    "pytorch_parity": {
+      "forward_max_absolute_error": 4.336808689942018e-19,
+      "gradient_max_absolute_error": {
+        "hidden.bias": 1.6263032587282567e-19,
+        "hidden.weights": 1.6263032587282567e-19,
+        "output.bias": 4.336808689942018e-19,
+        "output.weights": 3.2526065174565133e-19
+      },
+      "input_gradient_max_absolute_error": 6.505213034913027e-19,
+      "loss_absolute_error": 6.071532165918825e-18,
+      "passed": true,
+      "tolerance": 1e-08,
+      "update_max_absolute_error": {
+        "hidden.bias": 0.0,
+        "hidden.weights": 0.0,
+        "output.bias": 0.0,
+        "output.weights": 0.0
+      }
+    },
+    "trace_schema": "1.0",
+    "xor_accuracy": 1.0
+  }
+}

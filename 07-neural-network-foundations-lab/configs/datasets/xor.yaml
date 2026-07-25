@@ -1,0 +1,4 @@
+name: xor
+description: Binary XOR truth table; requires a nonlinear hidden representation.
+seed: 0
+

@@ -1,6 +1,59 @@
-# 07-neural-network-foundations-lab
+# Neural Network Foundations Lab
 
-## 🧠 Descripción
+> Plan 2 · Deep Learning Core · Global days 190–210
+
+An inspectable neural-network engine built from first principles with NumPy.
+The project owns the mathematical engine, validation evidence and serializable
+trace contract. Its standalone **Neural Network Foundations Lab** interface
+lives in `frontend/app.py` and directly consumes this repository's public
+Python package; it does not depend on another project or repository.
+
+The current map supersedes older scope notes in this document. Closure requires
+finite-difference gradient checks, deterministic XOR learning, checkpoint
+restoration, PyTorch parity and a working visual integration—not merely a
+decreasing loss.
+
+### Delivery milestones
+
+| Milestone | Global days | Status |
+|---|---:|---|
+| Foundations and trace contract | 190–196 | Completed |
+| Backpropagation and XOR training | 197–203 | Completed |
+| Stability and PyTorch parity | 204–207 | Completed |
+| Standalone visual interface | 208–210 | Completed |
+
+Architecture and contract references:
+[learning contract](docs/learning-contract.md) ·
+[interface contract](docs/interface-contract.md) ·
+[decisions](docs/decisions.md).
+
+### Run locally
+
+```powershell
+Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\07-neural-network-foundations-lab"
+.\.venv\Scripts\Activate.ps1
+$env:PYTHONPATH = (Resolve-Path "src").Path
+python -m pytest -q
+python scripts\validate_project.py
+python scripts\run_experiment.py configs\experiments\xor.yaml
+python -m streamlit run frontend\app.py
+```
+
+Generated evidence includes a full trace, gradient-check report, reproducible
+checkpoint, NumPy/PyTorch parity report and SVG decision boundaries. See the
+[demo guide](docs/demo-guide.md) and [delivery evidence](docs/worklog.md).
+
+Open `http://localhost:8501` to configure a deterministic experiment, apply a
+single SGD update or bounded training run, inspect a per-neuron forward/backward
+trace, compare decision boundaries and execute NumPy/PyTorch parity.
+
+<details>
+<summary>Historical initial scope</summary>
+
+The following notes are retained as the original learning brief. The status,
+commands, architecture and acceptance evidence above are authoritative.
+
+## 🧠 Initial description
 
 Lab técnico para entender los fundamentos internos de una red neuronal y conectarlos con una implementación profesional usando PyTorch.
 
@@ -348,3 +401,5 @@ Los uso para construir mejor.
 Este proyecto no busca demostrar que puedo hacer una red neuronal enorme.
 
 Busca demostrar que entiendo el núcleo del aprendizaje profundo.
+
+</details>
