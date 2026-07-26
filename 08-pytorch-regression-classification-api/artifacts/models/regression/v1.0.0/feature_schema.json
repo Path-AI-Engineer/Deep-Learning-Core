@@ -1,0 +1,74 @@
+[
+  {
+    "name": "MedInc",
+    "display_name": "Medinc",
+    "description": "Observed numeric feature: MedInc.",
+    "minimum": 0.89410001039505,
+    "maximum": 9.719400405883789,
+    "example": 3.2969000339508057,
+    "unit": null
+  },
+  {
+    "name": "HouseAge",
+    "display_name": "Houseage",
+    "description": "Observed numeric feature: HouseAge.",
+    "minimum": 4.0,
+    "maximum": 48.0,
+    "example": 31.0,
+    "unit": null
+  },
+  {
+    "name": "AveRooms",
+    "display_name": "Averooms",
+    "description": "Observed numeric feature: AveRooms.",
+    "minimum": 2.935828924179077,
+    "maximum": 8.306260108947754,
+    "example": 5.008988857269287,
+    "unit": null
+  },
+  {
+    "name": "AveBedrms",
+    "display_name": "Avebedrms",
+    "description": "Observed numeric feature: AveBedrms.",
+    "minimum": 0.7200000286102295,
+    "maximum": 1.3179486989974976,
+    "example": 1.0440421104431152,
+    "unit": null
+  },
+  {
+    "name": "Population",
+    "display_name": "Population",
+    "description": "Observed numeric feature: Population.",
+    "minimum": 25.0,
+    "maximum": 12203.0,
+    "example": 1306.0,
+    "unit": null
+  },
+  {
+    "name": "AveOccup",
+    "display_name": "Aveoccup",
+    "description": "Observed numeric feature: AveOccup.",
+    "minimum": 1.600000023841858,
+    "maximum": 5.350157737731934,
+    "example": 3.441025733947754,
+    "unit": null
+  },
+  {
+    "name": "Latitude",
+    "display_name": "Latitude",
+    "description": "Observed numeric feature: Latitude.",
+    "minimum": 33.97999954223633,
+    "maximum": 38.33000183105469,
+    "example": 35.369998931884766,
+    "unit": null
+  },
+  {
+    "name": "Longitude",
+    "display_name": "Longitude",
+    "description": "Observed numeric feature: Longitude.",
+    "minimum": -122.33000183105469,
+    "maximum": -118.02999877929688,
+    "example": -119.02999877929688,
+    "unit": null
+  }
+]

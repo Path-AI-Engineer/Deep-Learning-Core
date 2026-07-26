@@ -1,0 +1,10 @@
+task: regression
+dataset: california_housing
+seed: 42
+batch_size: 128
+epochs: 120
+learning_rate: 0.001
+optimizer: adam
+weight_decay: 0.0001
+patience: 14
+min_delta: 0.0001

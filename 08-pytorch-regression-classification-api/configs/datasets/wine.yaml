@@ -1,0 +1,9 @@
+name: wine
+task: classification
+target: class
+source: sklearn.datasets.load_wine
+random_seed: 42
+split:
+  train: 0.70
+  validation: 0.15
+  test: 0.15

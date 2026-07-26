@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "task": "regression",
+  "model_version": "1.0.0",
+  "files": {
+    "model_state.pt": "6f474ade5fd214735bc8c49b1b8f807aa96274edbc33f4cedede1c21978e8971",
+    "model_config.json": "1b96cde7dfc94f6b48d8387bde0f1dea53e432eae98fa9a9bd2763abc1e487b5",
+    "preprocessing.json": "f8d5ee7c6ab345154b9933a2e1ea7120318370c04288630e38490414bf5e4131",
+    "feature_schema.json": "fd399027feec0a1fa6c7bb741e29ec0fa1c134a5635cb381a95478da3ca266ff",
+    "metrics.json": "d1a602f412c3fc70bc6bedf3e127709fb1694236a35d226a45ee8bdb784291a5",
+    "training_history.json": "090829b9750c799c2823d3949749f418116c765547ec46716efb0a19335717c5",
+    "metadata.json": "985976a3eb4fd4456dc00ac09cbf7772900281acff9bb60d5ba01860648f85c2"
+  }
+}

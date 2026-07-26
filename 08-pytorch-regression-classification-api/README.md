@@ -1,4 +1,146 @@
-# 08-pytorch-regression-classification-api
+# PyTorch Tabular Studio
+
+A complete Deep Learning workflow for tabular regression and multiclass
+classification. Two approved PyTorch MLPs are served through a versioned
+FastAPI backend and a responsive React interface with batch inference,
+reproducible artifacts and explicit model limitations.
+
+## Product
+
+- **California Housing regression** estimates median district house value in
+  units of USD 100,000.
+- **Wine classification** predicts one of three classes and displays the full
+  probability distribution without presenting probability as certainty.
+- **PyTorch Tabular Studio** provides schema-driven forms, approved examples,
+  metrics against baselines, training curves, model cards and CSV batch
+  inference limited to 100 observations.
+
+![PyTorch Tabular Studio overview](docs/demo/overview-desktop-1440.png)
+
+```text
+dataset -> train/validation/test -> train-only scaler -> DataLoader -> MLP
+        -> validation checkpoint -> test evaluation -> signed CPU bundle
+        -> FastAPI /api/v1 -> React/Vite
+```
+
+## Verified evidence
+
+| Task | Approved model | Primary result | Acceptance gate |
+|---|---|---:|---|
+| Regression | MLP `v1.0.0` | MAE `0.5097` | Beats mean-regressor MAE |
+| Classification | MLP `v1.0.0` | Macro F1 `0.9599` | Beats prior classifier |
+
+Classification also records accuracy `0.9630`, log loss `0.0840` and its
+confusion matrix. Regression records RMSE `0.8002` and R² `-0.0505`.
+
+The checked-in regression bundle uses the bundled official-source reference
+sample because this build environment had no dataset network access. For a
+full benchmark, place the complete official `california_housing.csv` in
+`data/raw/` and retrain. The loader validates the official eight-feature
+schema; runtime inference never downloads data.
+
+## Run locally
+
+Prerequisites: Python 3.12 and Node.js 20+.
+
+```powershell
+Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\08-pytorch-regression-classification-api"
+
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt -r requirements-dev.txt
+
+Set-Location .\frontend
+npm ci
+npm run build
+Set-Location ..
+
+$env:PYTHONPATH = "$PWD\src;$PWD\backend"
+python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8008
+```
+
+Open [http://127.0.0.1:8008](http://127.0.0.1:8008). Swagger is available at
+[http://127.0.0.1:8008/docs](http://127.0.0.1:8008/docs).
+
+For frontend hot reload, keep FastAPI on port `8008`, run `npm run dev` inside
+`frontend/`, and open [http://127.0.0.1:5178](http://127.0.0.1:5178).
+
+## Validate
+
+```powershell
+python -m pytest -q
+python -m mypy src backend
+python scripts\validate_project.py
+
+Set-Location .\frontend
+npm run build
+npm test
+Set-Location ..
+
+python scripts\smoke_test.py --base-url http://127.0.0.1:8008
+```
+
+## Docker
+
+```powershell
+docker build -t pytorch-tabular-studio:v1.0.0 .
+docker run --rm -p 8080:8080 --name pytorch-tabular-studio pytorch-tabular-studio:v1.0.0
+python scripts\smoke_test.py --base-url http://127.0.0.1:8080
+```
+
+The multi-stage image builds React and serves the production SPA from FastAPI.
+Only approved model bundles are copied into the runtime image.
+
+## API v1
+
+- `GET /api/v1/health`
+- `GET /api/v1/health/live`
+- `GET /api/v1/health/ready`
+- `GET /api/v1/tasks`
+- `GET /api/v1/tasks/{task}/schema`
+- `GET /api/v1/tasks/{task}/model-card`
+- `POST /api/v1/predictions/{task}`
+- `POST /api/v1/predictions/{task}/batch`
+
+Unknown tasks return 404, invalid features 422, oversized batches 413 and
+unavailable approved models 503.
+
+## Repository guide
+
+- `src/pytorch_tabular/` — data, models, training, evaluation, experiments,
+  artifacts and CPU inference.
+- `backend/app/` — FastAPI registry, schemas and versioned routes.
+- `frontend/` — React, TypeScript and Vite product interface.
+- `artifacts/models/` — approved, hash-validated inference bundles.
+- `configs/` — dataset, model and experiment definitions.
+- `labs/` — five focused PyTorch learning labs.
+- `tests/` — ML, integration, acceptance, bundle, API and contract tests.
+- `docs/` — architecture, contracts, model cards and demo guidance.
+
+## Limitations
+
+- This is an educational benchmark product, not a valuation or quality
+  decision system.
+- Input range warnings are not calibrated uncertainty intervals.
+- Wine probabilities are model outputs, not guarantees or causal evidence.
+- California Housing represents historical district aggregates, not current
+  individual property prices.
+- CPU inference is the supported release target.
+
+See [architecture](docs/architecture.md),
+[artifact contract](docs/artifact-contract.md) and
+[demo guide](docs/demo-guide.md). The complete day-by-day evidence is in the
+[project closeout](docs/project-closeout.md), with copy-ready
+[v1.0.0 release notes](docs/release-v1.0.0.md).
+
+Project 08 closes global days 211–231 of the AI Engineer path. The intended
+release is `v1.0.0` after a clean Git state and Docker smoke test.
+
+<!-- Superseded planning README retained in-place because this sandbox cannot
+delete the pre-existing tracked file contents. It is not part of the rendered
+project documentation. The original source is also preserved in
+docs/legacy-readme.md.
 
 ## 🧠 Descripción
 
@@ -350,3 +492,4 @@ Uso PyTorch para construir mejor después de entenderlos.
 Este proyecto no busca entrenar una red enorme.
 
 Busca demostrar que puedo usar PyTorch con criterio para construir modelos entrenables, evaluables, guardables y servibles por API.
+-->

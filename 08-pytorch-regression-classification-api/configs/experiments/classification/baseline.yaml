@@ -1,0 +1,10 @@
+task: classification
+dataset: wine
+seed: 42
+batch_size: 24
+epochs: 160
+learning_rate: 0.001
+optimizer: adam
+weight_decay: 0.0001
+patience: 18
+min_delta: 0.0001

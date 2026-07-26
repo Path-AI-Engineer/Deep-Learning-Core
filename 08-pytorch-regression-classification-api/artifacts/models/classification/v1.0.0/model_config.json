@@ -1,0 +1,9 @@
+{
+  "input_features": 13,
+  "hidden_units": [
+    48,
+    24
+  ],
+  "dropout": 0.1,
+  "output_units": 3
+}

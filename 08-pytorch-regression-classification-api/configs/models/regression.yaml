@@ -1,0 +1,5 @@
+task: regression
+hidden_units: [64, 32]
+activation: relu
+dropout: 0.10
+output_units: 1

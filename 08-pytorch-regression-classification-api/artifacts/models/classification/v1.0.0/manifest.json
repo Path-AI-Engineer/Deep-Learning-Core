@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "task": "classification",
+  "model_version": "1.0.0",
+  "files": {
+    "model_state.pt": "054f4d457b7dae985b4366f89adfab637946eca173d60de805f2058d6d6c6a25",
+    "model_config.json": "72d24b8ee217ee3af675ab68d6e4ad292794d7a88c8148186448a663154826e9",
+    "preprocessing.json": "271c0e3d622c31621d66f4b400d298a4398ab7432659b275069000e112bafd86",
+    "feature_schema.json": "65d6963b51b2423dfa4b6539749133271f6cfc712b2e00b53bc49633f1f90b1c",
+    "metrics.json": "6188029c5ea14798bc72e09695996a923ead0628fe16e4eecfb064355f6d9262",
+    "training_history.json": "74132d73a79413cc4845ccc9efd5365909509abad01ab8cfac763bc51d12ba64",
+    "metadata.json": "dcfd11e3cf6686a8f61f9ddc72d53e938106d6b29ce4236913f762b4b1235478",
+    "class_mapping.json": "4895d4b8e7711ff5c27e490cd5883dbefc1edd2f7d5c024a99fbd2cbae5d739d",
+    "confusion_matrix.json": "03dbf3619a04edd80c5ee96ca574f09e99530500f5f2cbe3a4b696ea511ba69a"
+  }
+}

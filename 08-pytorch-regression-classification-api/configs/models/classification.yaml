@@ -1,0 +1,5 @@
+task: classification
+hidden_units: [48, 24]
+activation: relu
+dropout: 0.10
+output_units: 3
