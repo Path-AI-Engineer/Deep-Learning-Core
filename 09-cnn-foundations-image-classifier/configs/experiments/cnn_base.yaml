@@ -1,0 +1,14 @@
+name: cnn-base
+model: configs/models/cnn_base.yaml
+dataset: configs/datasets/fashion_mnist.yaml
+seed: 20260728
+epochs: 8
+batch_size: 128
+learning_rate: 0.001
+weight_decay: 0.0001
+patience: 3
+device: cpu
+augmentation:
+  random_crop_padding: 2
+  horizontal_flip: false
+

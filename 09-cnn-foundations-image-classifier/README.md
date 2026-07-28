@@ -1,4 +1,123 @@
-# 09-cnn-foundations-image-classifier
+# CNN Vision Lab
+
+An inspectable FashionMNIST product that connects convolution mechanics,
+controlled CNN inference, intermediate activations and held-out evaluation in
+one professional web laboratory.
+
+Project 09 of **AI Engineer · Deep Learning Core**.
+
+## Product
+
+CNN Vision Lab makes the image-to-tensor pipeline observable:
+
+- calculate two-dimensional cross-correlation and verify PyTorch parity;
+- compare a compact MLP and CNN under one fair protocol;
+- classify official test samples or memory-only PNG/JPEG uploads;
+- inspect selected feature maps without causal claims;
+- review accuracy, macro F1, per-class evidence, confusion and errors;
+- load one immutable CPU bundle with reconstruction metadata and hashes.
+
+The interface exposes six real routes:
+
+```text
+/              Overview and interactive 3D tensor topology
+/classify      Controlled sample and upload inference
+/convolution   Manual cross-correlation laboratory
+/feature-maps  Whitelisted intermediate activations
+/evaluation    Test metrics and MLP comparison
+/about         Model card, architecture and limitations
+```
+
+Without a complete artifact, model-dependent endpoints return HTTP 503 and the
+interface displays **Degraded mode**. The convolution lab remains usable because
+it does not depend on trained weights.
+
+See [architecture](docs/architecture.md), [contracts](docs/contracts.md) and
+[engineering decisions](docs/decisions.md).
+
+## Local setup
+
+```powershell
+Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\09-cnn-foundations-image-classifier"
+
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt -r requirements-dev.txt
+python -m pip install -e .
+
+Set-Location frontend
+$env:npm_config_offline = "false"
+npm install
+Set-Location ..
+```
+
+## Prepare, train and approve
+
+```powershell
+python scripts/prepare_data.py
+python scripts/train_mlp_baseline.py
+python scripts/train_cnn.py
+```
+
+The training commands print immutable run paths. Build the serving artifact:
+
+```powershell
+python scripts/build_model_bundle.py `
+  --mlp-run artifacts/runs/mlp-baseline/<run-id> `
+  --cnn-run artifacts/runs/cnn-base/<run-id> `
+  --version v1.0.0
+```
+
+No numeric performance claim belongs here until those commands run against the
+official data. See the [reproducibility contract](docs/reproducibility.md).
+
+## Run the product
+
+Terminal 1:
+
+```powershell
+$env:PYTHONPATH = "$PWD\src;$PWD\backend"
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8009 --reload
+```
+
+Terminal 2:
+
+```powershell
+Set-Location frontend
+npm run dev
+```
+
+Open `http://127.0.0.1:5179`. API documentation is at
+`http://127.0.0.1:8009/docs`.
+
+## Validation
+
+```powershell
+python -m pytest -q
+python -m ruff check .
+python -m mypy src backend scripts
+python scripts/validate_project.py
+
+Set-Location frontend
+npm run typecheck
+npm run build
+```
+
+With the approved assets present, run `python scripts/smoke_test.py`. The
+production Dockerfile intentionally refuses to build without the official
+gallery and versioned bundle.
+
+## Boundary
+
+This is not a general computer-vision platform. It has no online training,
+database, authentication, remote persistence or arbitrary dataset ingestion.
+Uploaded images are processed in memory and are not retained.
+
+See the [model card](docs/model-card.md), [demo guide](docs/demo-guide.md) and
+[closeout evidence](docs/closeout.md).
+
+<!-- Legacy planning draft intentionally hidden from rendered documentation.
 
 ## 🧠 Descripción
 

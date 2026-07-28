@@ -1,0 +1,6 @@
+kind: mlp
+input_features: 784
+num_classes: 10
+hidden_features: 128
+dropout: 0.25
+

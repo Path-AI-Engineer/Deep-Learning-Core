@@ -1,0 +1,8 @@
+kind: cnn
+input_channels: 1
+num_classes: 10
+conv_channels: [16, 32]
+hidden_features: 128
+dropout: 0.25
+batch_norm: true
+

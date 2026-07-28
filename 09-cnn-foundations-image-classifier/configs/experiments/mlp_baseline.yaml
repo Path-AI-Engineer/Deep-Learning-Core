@@ -1,0 +1,12 @@
+name: mlp-baseline
+model: configs/models/mlp_baseline.yaml
+dataset: configs/datasets/fashion_mnist.yaml
+seed: 20260728
+epochs: 8
+batch_size: 128
+learning_rate: 0.001
+weight_decay: 0.0001
+patience: 3
+device: cpu
+augmentation: {}
+
