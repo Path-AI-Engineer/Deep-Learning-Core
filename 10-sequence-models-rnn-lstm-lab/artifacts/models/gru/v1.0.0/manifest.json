@@ -1,0 +1,26 @@
+{
+  "task": "many-to-one sequence classification",
+  "model_id": "gru",
+  "version": "v1.0.0",
+  "dataset": "deterministic HAR-shaped educational fixture",
+  "dataset_status": "fixture-not-uci",
+  "official_dataset_target": "UCI HAR Smartphones",
+  "input_shape": [
+    null,
+    128,
+    9
+  ],
+  "class_mapping": {
+    "0": "WALKING",
+    "1": "WALKING_UPSTAIRS",
+    "2": "WALKING_DOWNSTAIRS",
+    "3": "SITTING",
+    "4": "STANDING",
+    "5": "LAYING"
+  },
+  "seed": 42,
+  "device": "cpu",
+  "selection_metric": "validation macro F1",
+  "warning": "Replace this fixture bundle with an official UCI-trained bundle for claims.",
+  "state_sha256": "92c005ac5314de723d14232c9c6aec347345f77e0273f7f82d126a9cdda82013"
+}

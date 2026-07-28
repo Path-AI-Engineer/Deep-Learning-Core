@@ -1,328 +1,113 @@
-# 10-sequence-models-rnn-lstm-lab
+# Sequence Memory Lab
 
-## 🧠 Descripción
+An inspectable sequence-classification workspace for comparing vanilla RNN, LSTM, and GRU models on multivariate sensor windows. It joins reproducible PyTorch experiments, educational recurrent-cell labs, versioned inference bundles, a FastAPI service, and a six-view React interface.
 
-Lab técnico para entender modelos secuenciales como **RNN, LSTM y GRU**.
+> **Evidence boundary:** the committed `v1.0.0` bundles use a deterministic, HAR-shaped educational fixture so the complete system works offline. They are not UCI HAR benchmark results. Run the official data workflow before making dataset-performance claims.
 
-Este proyecto continúa la base del:
+## What the project demonstrates
 
-```txt
-09-cnn-foundations-image-classifier
+- many-to-one classification over tensors shaped `[batch, 128, 9]`;
+- grouped train/validation splitting and the untouched official UCI test split;
+- normalization fitted only on the training partition;
+- temporal-statistics MLP, RNN, LSTM, and GRU comparison;
+- BPTT gradient inspection, clipping, padding, and packed sequences;
+- educational recurrent-cell parity against PyTorch primitives;
+- immutable bundles with configuration, metrics, preprocessing, weights, and hashes;
+- a 14-operation REST contract and a responsive product interface.
+
+## Product routes
+
+| Route | Purpose |
+|---|---|
+| `/` | Project status, evidence boundary, and active model |
+| `/classify` | Classify an inspectable 128-step sensor sequence |
+| `/sequence-lab` | Explore hidden states, gates, and gradient flow |
+| `/compare` | Compare RNN, LSTM, and GRU evidence |
+| `/evaluation` | Inspect confusion matrix and class-level metrics |
+| `/about` | Review architecture, dataset contract, and limitations |
+
+## Run locally
+
+```powershell
+Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\10-sequence-models-rnn-lstm-lab"
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
+python -m pip install -e .
+Set-Location frontend
+npm install
+npm run build
+Set-Location ..
+python scripts\bootstrap_fixture_bundles.py --force
+python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8010
 ```
 
-pero cambia el tipo de problema:
+Open `http://127.0.0.1:8010`. FastAPI serves both `/api/v1/*` and the compiled SPA.
 
-```txt
-Antes:
-imágenes como tensores
+## Official UCI HAR workflow
 
-Ahora:
-datos ordenados en secuencia
+```powershell
+python scripts\download_data.py
+python scripts\prepare_data.py
+python scripts\train_baseline.py
+python scripts\train_model.py --model rnn
+python scripts\train_model.py --model lstm
+python scripts\train_model.py --model gru
+python scripts\compare_models.py
+python scripts\evaluate_model.py --model gru
 ```
 
-Este proyecto pertenece al:
+The preparation command records provenance, subjects, split sizes, and training-only normalization statistics. See `docs/data-contract.md` before producing benchmark evidence.
 
-```txt
-Plan 2 — Deep Learning Core
+## Quality gates
+
+```powershell
+$env:RUFF_NO_CACHE = "true"
+python -m ruff check src backend scripts tests
+python -m mypy src backend
+python -m pytest -q
+python scripts\validate_project.py
+Set-Location frontend
+npm run build
 ```
 
-y forma parte del conjunto:
+## Architecture
 
-```txt
-Núcleo de Redes Neuronales Profundas
+```text
+frontend/                    React product interface
+backend/app/                 FastAPI transport and artifact registry
+src/sequence_models/         Data, models, cells, training, evaluation, inference
+artifacts/models/            Immutable, versioned inference bundles
+artifacts/comparisons/       Reproducible model-selection evidence
+configs/                     Dataset, model, and experiment configuration
+scripts/                     Download, preparation, training, evaluation, validation
+labs/                        Guided technical experiments
+docs/                        Contracts, decisions, limitations, and model evidence
+tests/                       ML, API, and OpenAPI verification
 ```
 
-La idea no es construir todavía un modelo de lenguaje avanzado.
+The API never trains a model during a request. It loads validated bundles with `weights_only=True`, verifies SHA-256 hashes, and exposes deterministic inference and inspection endpoints.
 
-La idea es entender cómo una red puede procesar información paso a paso en el tiempo o en una secuencia.
+## Docker
 
----
-
-## 🎯 Objetivo
-
-Construir y comparar modelos secuenciales básicos usando RNN, LSTM y GRU.
-
-El objetivo técnico es entender cómo una red procesa datos donde el orden importa, como texto, ventas temporales, sensores, eventos o secuencias de comportamiento.
-
----
-
-## 👤 Usuario objetivo
-
-* AI Engineer en formación.
-* Estudiante de Deep Learning.
-* Persona que quiere entender modelos secuenciales.
-* Futuro constructor de LLMs, Transformers, agentes, forecasting avanzado y sistemas de robótica.
-* Reclutador técnico interesado en fundamentos de redes secuenciales.
-
----
-
-## 🧱 Arquitectura esperada
-
-```txt
-Dataset secuencial
-      ↓
-Preprocesamiento de secuencia
-      ↓
-Sequence Dataset
-      ↓
-RNN / LSTM / GRU
-      ↓
-Training Loop
-      ↓
-Evaluation
-      ↓
-Comparación de modelos
-      ↓
-Reporte técnico
+```powershell
+docker build -t sequence-memory-lab:v1.0.0 .
+docker run --rm -p 8080:8080 sequence-memory-lab:v1.0.0
 ```
 
----
-
-## 🔁 Flujo técnico
-
-```txt
-sequence data
-   ↓
-tokens / timesteps
-   ↓
-padding si aplica
-   ↓
-Dataset / DataLoader
-   ↓
-RNN baseline
-   ↓
-LSTM model
-   ↓
-GRU model
-   ↓
-metrics
-   ↓
-comparison notes
-```
-
----
-
-## 🧩 Módulos
-
-### Módulo 1 — Sequence Dataset
-
-Preparar datos secuenciales para entrenamiento.
-
-Incluye:
-
-* Secuencias.
-* Timesteps.
-* Features por paso.
-* Padding básico si aplica.
-* Batches de secuencias.
-* Separación train/test.
-
-Pregunta central:
-
-```txt
-¿Cómo preparo datos donde el orden importa?
-```
-
----
-
-### Módulo 2 — RNN Baseline
-
-Construir una RNN simple como primera referencia.
-
-Incluye:
-
-* Hidden state.
-* Procesamiento paso a paso.
-* Salida final.
-* Predicción secuencial o clasificación de secuencia.
-* Limitaciones de una RNN básica.
-
-Pregunta central:
-
-```txt
-¿Cómo una RNN recuerda información de pasos anteriores?
-```
-
----
-
-### Módulo 3 — LSTM Model
-
-Construir un modelo LSTM para manejar mejor memoria secuencial.
-
-Incluye:
-
-* Cell state.
-* Hidden state.
-* Gates.
-* Memoria a largo plazo.
-* Comparación contra RNN.
-* Problema de vanishing gradients.
-
-Pregunta central:
-
-```txt
-¿Por qué LSTM puede recordar mejor que una RNN simple?
-```
-
----
-
-### Módulo 4 — GRU Model
-
-Construir un modelo GRU como alternativa más compacta.
-
-Incluye:
-
-* Update gate.
-* Reset gate.
-* Hidden state.
-* Comparación contra LSTM.
-* Ventajas y limitaciones.
-
-Pregunta central:
-
-```txt
-¿Cuándo una GRU puede ser suficiente frente a una LSTM?
-```
-
----
-
-### Módulo 5 — Sequence Evaluation
-
-Evaluar modelos secuenciales.
-
-Incluye:
-
-* Loss.
-* Accuracy si es clasificación.
-* MAE/RMSE si es predicción numérica.
-* Comparación train vs test.
-* Errores por longitud de secuencia.
-* Overfitting en secuencias.
-
-Pregunta central:
-
-```txt
-¿Cómo sé si el modelo entiende la secuencia o solo memorizó patrones?
-```
-
----
-
-### Módulo 6 — Comparison Notes
-
-Comparar RNN, LSTM y GRU con criterio.
-
-Incluye:
-
-* Simplicidad.
-* Capacidad de memoria.
-* Costo computacional.
-* Rendimiento.
-* Interpretación.
-* Limitaciones frente a Transformers.
-
-Pregunta central:
-
-```txt
-¿Qué modelo secuencial elegiría y por qué?
-```
-
----
-
-## 🧪 Labs
-
-### tec-labs
-
-* `tec-sequence-dataset-lab`
-* `tec-rnn-hidden-state-lab`
-* `tec-lstm-memory-lab`
-* `tec-gru-comparison-lab`
-* `tec-sequence-evaluation-lab`
-* `tec-sequence-model-limitations-lab`
-
----
-
-## 📊 Métricas
-
-Dependiendo del tipo de problema:
-
-### Clasificación secuencial
-
-* Accuracy.
-* Precision.
-* Recall.
-* F1-score.
-* Confusion Matrix.
-* Train loss.
-* Validation loss.
-
-### Predicción numérica secuencial
-
-* MAE.
-* RMSE.
-* MSE.
-* Train loss.
-* Validation loss.
-
-### Señales de comparación
-
-* RNN vs LSTM.
-* LSTM vs GRU.
-* Error por longitud de secuencia.
-* Diferencia entre train y test.
-* Tiempo de entrenamiento si aplica.
-
----
-
-## 📌 Próximos pasos
-
-* Elegir un dataset secuencial pequeño.
-* Definir si el problema será clasificación o predicción.
-* Preparar secuencias.
-* Crear `Dataset` y `DataLoader`.
-* Implementar RNN simple.
-* Implementar LSTM.
-* Implementar GRU.
-* Crear training loop.
-* Crear evaluation loop.
-* Calcular métricas.
-* Comparar resultados.
-* Analizar limitaciones.
-* Documentar diferencias entre RNN, LSTM y GRU.
-* Explicar por qué Transformers superan varias limitaciones.
-* Grabar demo o explicación corta.
-* Actualizar LinkedIn y CV.
-
----
-
-## ✅ Entregable final
-
-Al terminar este proyecto debe existir:
-
-* Dataset secuencial preparado.
-* RNN básica entrenada.
-* LSTM entrenada.
-* GRU entrenada.
-* Training loop funcional.
-* Evaluation loop funcional.
-* Métricas registradas.
-* Tabla comparativa.
-* Análisis de limitaciones.
-* README técnico.
-* Labs documentados.
-* Nota clara sobre la transición hacia Transformers.
-
----
-
-## 🧭 Regla final
-
-```txt
-Una secuencia no es solo una lista de datos.
-El orden cambia el significado.
-
-RNN, LSTM y GRU enseñan cómo una red intenta recordar.
-Transformers enseñarán otra forma más potente de usar contexto.
-```
-
-Este proyecto no busca construir un LLM.
-
-Busca entender la base histórica y conceptual de los modelos que procesan secuencias.
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Dataset contract](docs/data-contract.md)
+- [Sequence contract](docs/sequence-contract.md)
+- [Training contract](docs/training-contract.md)
+- [Artifact contract](docs/artifact-contract.md)
+- [API contract](docs/api-contract.md)
+- [Model card](docs/model-card.md)
+- [Reproducibility](docs/reproducibility.md)
+- [Error analysis](docs/error-analysis.md)
+
+## Release
+
+`v1.0.0` is the first portfolio release of Sequence Memory Lab. An official UCI-trained release must use a new artifact version and retain the original split and provenance evidence.

@@ -1,0 +1,348 @@
+{
+  "comparison_version": "v1.0.0",
+  "data_mode": "educational_fixture",
+  "selection_metric": "validation_macro_f1",
+  "approved_model": "rnn",
+  "models": [
+    {
+      "model_id": "rnn",
+      "accuracy": 0.833333,
+      "macro_precision": 0.75,
+      "macro_recall": 0.833333,
+      "macro_f1": 0.777778,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "WALKING",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 1,
+          "class_name": "WALKING_UPSTAIRS",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 2,
+          "class_name": "WALKING_DOWNSTAIRS",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 3,
+          "class_name": "SITTING",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 4,
+          "class_name": "STANDING",
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.666667,
+          "support": 3
+        },
+        {
+          "class_index": 5,
+          "class_name": "LAYING",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "test_loss": 1.04785,
+      "validation_macro_f1": 0.777778,
+      "best_epoch": 8,
+      "training_seconds": 0.5379,
+      "parameters": 990,
+      "artifact_status": "educational_fixture"
+    },
+    {
+      "model_id": "lstm",
+      "accuracy": 0.333333,
+      "macro_precision": 0.111111,
+      "macro_recall": 0.333333,
+      "macro_f1": 0.166667,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "WALKING",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 1,
+          "class_name": "WALKING_UPSTAIRS",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 2,
+          "class_name": "WALKING_DOWNSTAIRS",
+          "precision": 0.333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 3
+        },
+        {
+          "class_index": 3,
+          "class_name": "SITTING",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 4,
+          "class_name": "STANDING",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 5,
+          "class_name": "LAYING",
+          "precision": 0.333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 3
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "test_loss": 1.74223,
+      "validation_macro_f1": 0.166667,
+      "best_epoch": 1,
+      "training_seconds": 0.5595,
+      "parameters": 3510,
+      "artifact_status": "educational_fixture"
+    },
+    {
+      "model_id": "gru",
+      "accuracy": 0.833333,
+      "macro_precision": 0.75,
+      "macro_recall": 0.833333,
+      "macro_f1": 0.777778,
+      "per_class": [
+        {
+          "class_index": 0,
+          "class_name": "WALKING",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        {
+          "class_index": 1,
+          "class_name": "WALKING_UPSTAIRS",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 2,
+          "class_name": "WALKING_DOWNSTAIRS",
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.666667,
+          "support": 3
+        },
+        {
+          "class_index": 3,
+          "class_name": "SITTING",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 4,
+          "class_name": "STANDING",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        {
+          "class_index": 5,
+          "class_name": "LAYING",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "test_loss": 0.884907,
+      "validation_macro_f1": 0.777778,
+      "best_epoch": 9,
+      "training_seconds": 1.3256,
+      "parameters": 2670,
+      "artifact_status": "educational_fixture"
+    }
+  ],
+  "warning": "These measurements validate the system; they are not UCI HAR benchmark claims."
+}

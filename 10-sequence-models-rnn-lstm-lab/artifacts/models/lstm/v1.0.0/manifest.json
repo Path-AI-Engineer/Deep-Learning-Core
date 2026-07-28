@@ -1,0 +1,26 @@
+{
+  "task": "many-to-one sequence classification",
+  "model_id": "lstm",
+  "version": "v1.0.0",
+  "dataset": "deterministic HAR-shaped educational fixture",
+  "dataset_status": "fixture-not-uci",
+  "official_dataset_target": "UCI HAR Smartphones",
+  "input_shape": [
+    null,
+    128,
+    9
+  ],
+  "class_mapping": {
+    "0": "WALKING",
+    "1": "WALKING_UPSTAIRS",
+    "2": "WALKING_DOWNSTAIRS",
+    "3": "SITTING",
+    "4": "STANDING",
+    "5": "LAYING"
+  },
+  "seed": 42,
+  "device": "cpu",
+  "selection_metric": "validation macro F1",
+  "warning": "Replace this fixture bundle with an official UCI-trained bundle for claims.",
+  "state_sha256": "3a243ac35591daf23e4bd30105046edd5d02ee1061b545a2dde0694bf2e3c048"
+}

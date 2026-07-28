@@ -1,0 +1,9 @@
+{
+  "model_type": "lstm",
+  "input_size": 9,
+  "hidden_size": 24,
+  "num_layers": 1,
+  "num_classes": 6,
+  "dropout": 0.1,
+  "batch_first": true
+}
