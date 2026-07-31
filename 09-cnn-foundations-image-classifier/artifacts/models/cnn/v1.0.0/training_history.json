@@ -1,0 +1,109 @@
+{
+  "best_epoch": 6,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train": {
+        "accuracy": 0.7776274509803922,
+        "examples": 51000,
+        "loss": 0.6018725149210762
+      },
+      "validation": {
+        "accuracy": 0.8478888888888889,
+        "examples": 9000,
+        "loss": 0.4063873046239217
+      }
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "accuracy": 0.8456078431372549,
+        "examples": 51000,
+        "loss": 0.418707934589947
+      },
+      "validation": {
+        "accuracy": 0.8762222222222222,
+        "examples": 9000,
+        "loss": 0.3312661641438802
+      }
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "accuracy": 0.8619607843137255,
+        "examples": 51000,
+        "loss": 0.374888760286219
+      },
+      "validation": {
+        "accuracy": 0.8847777777777778,
+        "examples": 9000,
+        "loss": 0.3132443284458584
+      }
+    },
+    {
+      "epoch": 4,
+      "train": {
+        "accuracy": 0.8709411764705882,
+        "examples": 51000,
+        "loss": 0.35051241967724817
+      },
+      "validation": {
+        "accuracy": 0.9006666666666666,
+        "examples": 9000,
+        "loss": 0.27032987262143027
+      }
+    },
+    {
+      "epoch": 5,
+      "train": {
+        "accuracy": 0.8773529411764706,
+        "examples": 51000,
+        "loss": 0.33134501652624093
+      },
+      "validation": {
+        "accuracy": 0.8945555555555555,
+        "examples": 9000,
+        "loss": 0.2876091091632843
+      }
+    },
+    {
+      "epoch": 6,
+      "train": {
+        "accuracy": 0.8834509803921569,
+        "examples": 51000,
+        "loss": 0.31836307103026146
+      },
+      "validation": {
+        "accuracy": 0.9043333333333333,
+        "examples": 9000,
+        "loss": 0.252063367234336
+      }
+    },
+    {
+      "epoch": 7,
+      "train": {
+        "accuracy": 0.8862941176470588,
+        "examples": 51000,
+        "loss": 0.30528826168004203
+      },
+      "validation": {
+        "accuracy": 0.9,
+        "examples": 9000,
+        "loss": 0.2656241844230228
+      }
+    },
+    {
+      "epoch": 8,
+      "train": {
+        "accuracy": 0.8895294117647059,
+        "examples": 51000,
+        "loss": 0.2967845892017963
+      },
+      "validation": {
+        "accuracy": 0.9043333333333333,
+        "examples": 9000,
+        "loss": 0.26023757014009685
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "cnn": {
+    "accuracy": 0.8983,
+    "macro_f1": 0.8973072569469522
+  },
+  "mlp": {
+    "accuracy": 0.8768,
+    "macro_f1": 0.8770501649478287
+  },
+  "protocol": "identical dataset, split, optimizer family and isolated test policy"
+}

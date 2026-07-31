@@ -108,6 +108,18 @@ With the approved assets present, run `python scripts/smoke_test.py`. The
 production Dockerfile intentionally refuses to build without the official
 gallery and versioned bundle.
 
+## Cloud Run release package
+
+```powershell
+.\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"
+```
+
+The command only prints the plan unless `-Apply` is supplied. Before Cloud
+Build starts, it requires the official FashionMNIST gallery, the immutable
+`v1.0.0` bundle and the frontend lockfile. This preserves the evidence boundary:
+the deployment script cannot silently replace a missing trained model with a
+fixture. The target service is `ai-02-p09-cnn-vision-lab`.
+
 ## Boundary
 
 This is not a general computer-vision platform. It has no online training,

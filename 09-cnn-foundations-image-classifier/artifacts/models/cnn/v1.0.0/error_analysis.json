@@ -1,0 +1,804 @@
+{
+  "errors": [
+    {
+      "confidence": 0.9105634093284607,
+      "predicted_class": "Sandal",
+      "predicted_index": 5,
+      "sample_id": "test-00012",
+      "true_class": "Sneaker",
+      "true_index": 7
+    },
+    {
+      "confidence": 0.5406284332275391,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00017",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.9998427629470825,
+      "predicted_class": "Sandal",
+      "predicted_index": 5,
+      "sample_id": "test-00023",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.6287091970443726,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00025",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.6118321418762207,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00029",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6970034837722778,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00042",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.5920969843864441,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00048",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5882854461669922,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00066",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.750460147857666,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00067",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.8061085939407349,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00068",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.47975239157676697,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00073",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.6297482252120972,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00089",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.8280396461486816,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00098",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.5838074088096619,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00107",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.9818739891052246,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00147",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5609322786331177,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00150",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7382341623306274,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00166",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7069661021232605,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00172",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.8813871741294861,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00244",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.613105058670044,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00252",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.6014012694358826,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00255",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5982789397239685,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00271",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.651447057723999,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00279",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7826758027076721,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00316",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.7748855948448181,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00325",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.603689968585968,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00344",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5021064281463623,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00378",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7421297430992126,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00381",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.8435986042022705,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00382",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5525304079055786,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00406",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.4680688977241516,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00413",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.9709105491638184,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00441",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.81435626745224,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00444",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.48108330368995667,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00454",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.824645459651947,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00457",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.6435443758964539,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00460",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6968371272087097,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00474",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5399925112724304,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00478",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.6283587217330933,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00490",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6958186030387878,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00510",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.4510290324687958,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00529",
+      "true_class": "Bag",
+      "true_index": 8
+    },
+    {
+      "confidence": 0.6538642048835754,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00536",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6822093725204468,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00565",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5355386734008789,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00569",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6375739574432373,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00581",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5300977230072021,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00585",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7275354862213135,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00587",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.40191757678985596,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00595",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.49122223258018494,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00607",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.6744197607040405,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00623",
+      "true_class": "Ankle boot",
+      "true_index": 9
+    },
+    {
+      "confidence": 0.795400083065033,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00628",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.6156253814697266,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00634",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.7428759336471558,
+      "predicted_class": "Trouser",
+      "predicted_index": 1,
+      "sample_id": "test-00635",
+      "true_class": "Bag",
+      "true_index": 8
+    },
+    {
+      "confidence": 0.49415817856788635,
+      "predicted_class": "Trouser",
+      "predicted_index": 1,
+      "sample_id": "test-00661",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.523941159248352,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00670",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5072672367095947,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00674",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.5222065448760986,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00685",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.8915903568267822,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00688",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.5683613419532776,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00711",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.7974667549133301,
+      "predicted_class": "Sneaker",
+      "predicted_index": 7,
+      "sample_id": "test-00722",
+      "true_class": "Sandal",
+      "true_index": 5
+    },
+    {
+      "confidence": 0.544992208480835,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00724",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5242874026298523,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00726",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.9291057586669922,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00732",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5111367106437683,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00737",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.3512375056743622,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00753",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.5839640498161316,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00760",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.9997459053993225,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-00787",
+      "true_class": "Trouser",
+      "true_index": 1
+    },
+    {
+      "confidence": 0.43022531270980835,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00793",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.531288206577301,
+      "predicted_class": "Ankle boot",
+      "predicted_index": 9,
+      "sample_id": "test-00800",
+      "true_class": "Sneaker",
+      "true_index": 7
+    },
+    {
+      "confidence": 0.6787711977958679,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00817",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5180307626724243,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00823",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.7293944954872131,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00851",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.7874055504798889,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00893",
+      "true_class": "Pullover",
+      "true_index": 2
+    },
+    {
+      "confidence": 0.5440899133682251,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00909",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.8068726062774658,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00921",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5036771893501282,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00930",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.9864256381988525,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00938",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.7417494058609009,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00954",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.8524713516235352,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00960",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.5281976461410522,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-00963",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.7483295202255249,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-00965",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.6135560274124146,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00971",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.8416441082954407,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00977",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.9098505973815918,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-00979",
+      "true_class": "Dress",
+      "true_index": 3
+    },
+    {
+      "confidence": 0.3976864218711853,
+      "predicted_class": "Pullover",
+      "predicted_index": 2,
+      "sample_id": "test-00994",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.7919638752937317,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-01000",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.891015887260437,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-01005",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.7565651535987854,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-01025",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.4982464015483856,
+      "predicted_class": "Ankle boot",
+      "predicted_index": 9,
+      "sample_id": "test-01051",
+      "true_class": "Sandal",
+      "true_index": 5
+    },
+    {
+      "confidence": 0.7174755334854126,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-01056",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.6472591161727905,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-01058",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.456051766872406,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-01066",
+      "true_class": "Bag",
+      "true_index": 8
+    },
+    {
+      "confidence": 0.8507858514785767,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-01101",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.6105523109436035,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-01104",
+      "true_class": "Coat",
+      "true_index": 4
+    },
+    {
+      "confidence": 0.9998680353164673,
+      "predicted_class": "Dress",
+      "predicted_index": 3,
+      "sample_id": "test-01111",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.5705708861351013,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-01129",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.4842106103897095,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-01130",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.8300943374633789,
+      "predicted_class": "Coat",
+      "predicted_index": 4,
+      "sample_id": "test-01131",
+      "true_class": "Shirt",
+      "true_index": 6
+    },
+    {
+      "confidence": 0.5250462889671326,
+      "predicted_class": "Shirt",
+      "predicted_index": 6,
+      "sample_id": "test-01139",
+      "true_class": "T-shirt/top",
+      "true_index": 0
+    },
+    {
+      "confidence": 0.8745329976081848,
+      "predicted_class": "T-shirt/top",
+      "predicted_index": 0,
+      "sample_id": "test-01152",
+      "true_class": "Shirt",
+      "true_index": 6
+    }
+  ]
+}

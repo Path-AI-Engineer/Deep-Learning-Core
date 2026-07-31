@@ -43,8 +43,8 @@ def evaluate_predictions(
     )
     per_class = tuple(
         {
-            "index": index,
-            "class_name": CLASS_NAMES[index],
+            "index": int(index),
+            "class_name": CLASS_NAMES[int(index)],
             "precision": float(precision[index]),
             "recall": float(recall[index]),
             "f1": float(f1[index]),

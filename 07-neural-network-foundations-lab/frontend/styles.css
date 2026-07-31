@@ -289,6 +289,31 @@ footer {
   padding: 1.5rem 0 0;
 }
 
+button,
+[role="button"],
+[role="tab"],
+[role="combobox"],
+input,
+select {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+button:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="combobox"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid rgba(95, 176, 255, 0.32);
+  outline-offset: 2px;
+}
+
 @media (max-width: 760px) {
   .block-container {
     padding-left: 1rem;

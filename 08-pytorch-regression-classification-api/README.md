@@ -46,7 +46,7 @@ Prerequisites: Python 3.12 and Node.js 20+.
 ```powershell
 Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\08-pytorch-regression-classification-api"
 
-py -3.12 -m venv .venv
+python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt -r requirements-dev.txt
@@ -91,6 +91,17 @@ python scripts\smoke_test.py --base-url http://127.0.0.1:8080
 
 The multi-stage image builds React and serves the production SPA from FastAPI.
 Only approved model bundles are copied into the runtime image.
+
+### Cloud Run release package
+
+```powershell
+.\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"
+```
+
+The command is plan-only unless `-Apply` is present. The release workflow uses
+Cloud Build, Artifact Registry `plan-02`, the dedicated
+`ai-02-p08-pytorch-tabular-studio` service and a readiness smoke check. The
+image build uses the committed `package-lock.json` and approved model bundles.
 
 ## API v1
 

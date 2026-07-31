@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import numpy as np
 import pytest
 from pydantic import ValidationError
@@ -23,6 +25,14 @@ def test_metrics_include_all_ten_classes() -> None:
     assert report.accuracy == pytest.approx(2 / 3)
     assert len(report.per_class) == 10
     assert len(report.confusion_matrix) == 10
+
+
+def test_metrics_report_is_json_serializable() -> None:
+    report = evaluate_predictions([0, 1, 1], [0, 1, 0])
+
+    encoded = json.dumps(report.as_dict())
+
+    assert '"index": 0' in encoded
 
 
 def test_error_analysis_contains_only_mistakes() -> None:

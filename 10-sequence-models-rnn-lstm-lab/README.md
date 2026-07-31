@@ -96,6 +96,17 @@ docker build -t sequence-memory-lab:v1.0.0 .
 docker run --rm -p 8080:8080 sequence-memory-lab:v1.0.0
 ```
 
+### Cloud Run release package
+
+```powershell
+.\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"
+```
+
+The script is non-mutating without `-Apply`. It builds the immutable image with
+Cloud Build, publishes it to Artifact Registry `plan-02`, deploys
+`ai-02-p10-sequence-memory-lab` with scale-to-zero limits and verifies the
+versioned API health contract.
+
 ## Documentation
 
 - [Architecture](docs/architecture.md)

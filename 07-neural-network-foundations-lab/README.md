@@ -47,6 +47,20 @@ Open `http://localhost:8501` to configure a deterministic experiment, apply a
 single SGD update or bounded training run, inspect a per-neuron forward/backward
 trace, compare decision boundaries and execute NumPy/PyTorch parity.
 
+### Cloud Run release package
+
+The non-root `Dockerfile` exposes the Streamlit health contract on the Cloud Run
+`PORT`. Review the deployment plan without changing GCP:
+
+```powershell
+.\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"
+```
+
+Use `-Apply` only for an intentional public release. Cloud Build creates the
+versioned image in `plan-02`; Cloud Run uses the semantic service name
+`ai-02-p07-neural-foundations-lab`, a dedicated service account, scale-to-zero
+limits and a `/_stcore/health` smoke check.
+
 <details>
 <summary>Historical initial scope</summary>
 

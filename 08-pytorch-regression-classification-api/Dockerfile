@@ -1,7 +1,7 @@
 FROM node:20-alpine AS frontend-build
 
 WORKDIR /workspace/frontend
-COPY frontend/package.json frontend/npm-shrinkwrap.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
 COPY frontend/ ./
 RUN npm run build

@@ -1,0 +1,13 @@
+{
+  "batch_norm": true,
+  "conv_channels": [
+    16,
+    32
+  ],
+  "dropout": 0.25,
+  "hidden_features": 128,
+  "input_channels": 1,
+  "input_features": null,
+  "kind": "cnn",
+  "num_classes": 10
+}

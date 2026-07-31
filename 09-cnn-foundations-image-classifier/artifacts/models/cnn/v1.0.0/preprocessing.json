@@ -1,0 +1,15 @@
+{
+  "color_mode": "grayscale",
+  "mean": 0.2860406,
+  "resize": [
+    28,
+    28
+  ],
+  "std": 0.35302424,
+  "tensor_shape": [
+    1,
+    1,
+    28,
+    28
+  ]
+}
