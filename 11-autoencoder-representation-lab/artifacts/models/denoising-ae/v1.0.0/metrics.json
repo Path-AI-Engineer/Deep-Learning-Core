@@ -1,0 +1,28 @@
+{
+  "reconstruction": {
+    "mse": 0.0421419,
+    "mae": 0.124563,
+    "psnr": 13.75286,
+    "ssim": 0.468572
+  },
+  "representation": {
+    "linear_probe": {
+      "accuracy": 0.866667,
+      "macro_f1": 0.856429
+    },
+    "labels_used_for_autoencoder_training": false
+  },
+  "robustness": {
+    "gaussian_0.2": {
+      "mse": 0.0435551,
+      "mae": 0.1266329,
+      "psnr": 13.60961,
+      "ssim": 0.460726
+    },
+    "trained_with_corruption": true,
+    "target": "clean"
+  },
+  "validation_mse": 0.0421418622136116,
+  "parameters": 68721,
+  "training_seconds": 0.5134
+}

@@ -1,0 +1,166 @@
+{
+  "version": "v1.0.0",
+  "data_mode": "educational_fixture",
+  "active_model": "conv-ae",
+  "selection": "Conv AE is the active neural bundle for reconstruction, encoding and matched robustness workflows. PCA remains the strongest fixture reconstruction baseline; the conflict is retained rather than hidden.",
+  "models": [
+    {
+      "model_id": "mean-image",
+      "reconstruction": {
+        "mse": 0.0595119,
+        "mae": 0.1565567,
+        "psnr": 12.25397,
+        "ssim": 0.382461
+      },
+      "representation": {
+        "linear_probe": null,
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "not_applicable": true
+      },
+      "validation_mse": 0.05951185151934624,
+      "parameters": 0,
+      "training_seconds": 0.0
+    },
+    {
+      "model_id": "pca",
+      "reconstruction": {
+        "mse": 0.0093805,
+        "mae": 0.0583964,
+        "psnr": 20.27773,
+        "ssim": 0.713874
+      },
+      "representation": {
+        "linear_probe": {
+          "accuracy": 0.966667,
+          "macro_f1": 0.965714
+        },
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "not_applicable": true
+      },
+      "validation_mse": 0.009380531497299671,
+      "parameters": 12544,
+      "training_seconds": 0.0
+    },
+    {
+      "model_id": "dense-ae",
+      "reconstruction": {
+        "mse": 0.0507406,
+        "mae": 0.1402015,
+        "psnr": 12.94645,
+        "ssim": 0.417781
+      },
+      "representation": {
+        "linear_probe": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "gaussian_0.2": {
+          "mse": 0.05211,
+          "mae": 0.1433999,
+          "psnr": 12.83079,
+          "ssim": 0.412884
+        },
+        "trained_with_corruption": false,
+        "target": "clean"
+      },
+      "validation_mse": 0.050740569829940796,
+      "parameters": 437664,
+      "training_seconds": 0.3045
+    },
+    {
+      "model_id": "conv-ae",
+      "reconstruction": {
+        "mse": 0.042019,
+        "mae": 0.1192533,
+        "psnr": 13.76554,
+        "ssim": 0.488899
+      },
+      "representation": {
+        "linear_probe": {
+          "accuracy": 0.866667,
+          "macro_f1": 0.856429
+        },
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "gaussian_0.2": {
+          "mse": 0.0428096,
+          "mae": 0.1229612,
+          "psnr": 13.68459,
+          "ssim": 0.478606
+        },
+        "trained_with_corruption": false,
+        "target": "clean"
+      },
+      "validation_mse": 0.042018990963697433,
+      "parameters": 68721,
+      "training_seconds": 0.5257
+    },
+    {
+      "model_id": "denoising-ae",
+      "reconstruction": {
+        "mse": 0.0421419,
+        "mae": 0.124563,
+        "psnr": 13.75286,
+        "ssim": 0.468572
+      },
+      "representation": {
+        "linear_probe": {
+          "accuracy": 0.866667,
+          "macro_f1": 0.856429
+        },
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "gaussian_0.2": {
+          "mse": 0.0435551,
+          "mae": 0.1266329,
+          "psnr": 13.60961,
+          "ssim": 0.460726
+        },
+        "trained_with_corruption": true,
+        "target": "clean"
+      },
+      "validation_mse": 0.0421418622136116,
+      "parameters": 68721,
+      "training_seconds": 0.5134
+    },
+    {
+      "model_id": "latent-2d",
+      "reconstruction": {
+        "mse": 0.0562011,
+        "mae": 0.159168,
+        "psnr": 12.50255,
+        "ssim": 0.408861
+      },
+      "representation": {
+        "linear_probe": {
+          "accuracy": 0.533333,
+          "macro_f1": 0.485238
+        },
+        "labels_used_for_autoencoder_training": false
+      },
+      "robustness": {
+        "gaussian_0.2": {
+          "mse": 0.0580104,
+          "mae": 0.1635291,
+          "psnr": 12.36494,
+          "ssim": 0.393599
+        },
+        "trained_with_corruption": false,
+        "target": "clean"
+      },
+      "validation_mse": 0.056201059371232986,
+      "parameters": 24803,
+      "training_seconds": 0.4438
+    }
+  ],
+  "warning": "No value in this comparison is a FashionMNIST benchmark."
+}

@@ -1,0 +1,22 @@
+{
+  "model_id": "pca",
+  "reconstruction": {
+    "mse": 0.0093805,
+    "mae": 0.0583964,
+    "psnr": 20.27773,
+    "ssim": 0.713874
+  },
+  "representation": {
+    "linear_probe": {
+      "accuracy": 0.966667,
+      "macro_f1": 0.965714
+    },
+    "labels_used_for_autoencoder_training": false
+  },
+  "robustness": {
+    "not_applicable": true
+  },
+  "validation_mse": 0.009380531497299671,
+  "parameters": 12544,
+  "training_seconds": 0.0
+}

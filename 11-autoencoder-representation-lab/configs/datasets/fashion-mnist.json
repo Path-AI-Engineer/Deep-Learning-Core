@@ -1,0 +1,10 @@
+{
+  "name": "FashionMNIST",
+  "source": "torchvision.datasets.FashionMNIST",
+  "shape": [1, 28, 28],
+  "dtype": "float32",
+  "pixel_range": [0.0, 1.0],
+  "validation_fraction": 0.1,
+  "seed": 42,
+  "labels_used_for_autoencoder_training": false
+}

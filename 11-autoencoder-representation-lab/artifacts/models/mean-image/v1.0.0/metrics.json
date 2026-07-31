@@ -1,0 +1,19 @@
+{
+  "model_id": "mean-image",
+  "reconstruction": {
+    "mse": 0.0595119,
+    "mae": 0.1565567,
+    "psnr": 12.25397,
+    "ssim": 0.382461
+  },
+  "representation": {
+    "linear_probe": null,
+    "labels_used_for_autoencoder_training": false
+  },
+  "robustness": {
+    "not_applicable": true
+  },
+  "validation_mse": 0.05951185151934624,
+  "parameters": 0,
+  "training_seconds": 0.0
+}

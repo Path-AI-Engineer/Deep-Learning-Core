@@ -1,0 +1,7 @@
+{
+  "linear_probe": {
+    "accuracy": 0.533333,
+    "macro_f1": 0.485238
+  },
+  "labels_used_for_autoencoder_training": false
+}

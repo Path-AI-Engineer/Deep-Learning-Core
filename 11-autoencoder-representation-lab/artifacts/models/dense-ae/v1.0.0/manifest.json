@@ -1,0 +1,39 @@
+{
+  "task": "deterministic image reconstruction",
+  "model_id": "dense-ae",
+  "model_type": "dense-ae",
+  "model_version": "v1.0.0",
+  "dataset": "FashionMNIST-shaped educational fixture",
+  "dataset_status": "fixture-not-fashionmnist",
+  "official_dataset_target": "FashionMNIST",
+  "source": "local deterministic generator",
+  "license": "project fixture",
+  "seed": 42,
+  "input_shape": [
+    null,
+    1,
+    28,
+    28
+  ],
+  "dtype": "float32",
+  "pixel_range": [
+    0.0,
+    1.0
+  ],
+  "latent_dim": 16,
+  "labels_used_for_autoencoder_training": false,
+  "device": "cpu",
+  "warning": "Fixture metrics validate software, not FashionMNIST performance.",
+  "state_sha256": "69e9f6c9534302e6b4ce47acd0803cb40777fe743e5a4f11b6998567b2a25e59",
+  "required_files": [
+    "model_state.pt",
+    "model_config.json",
+    "preprocessing.json",
+    "metrics.json",
+    "reconstruction_metrics.json",
+    "representation_metrics.json",
+    "robustness_metrics.json",
+    "training_history.json",
+    "manifest.json"
+  ]
+}

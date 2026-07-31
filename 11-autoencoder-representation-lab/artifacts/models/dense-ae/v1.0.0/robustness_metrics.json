@@ -1,0 +1,10 @@
+{
+  "gaussian_0.2": {
+    "mse": 0.05211,
+    "mae": 0.1433999,
+    "psnr": 12.83079,
+    "ssim": 0.412884
+  },
+  "trained_with_corruption": false,
+  "target": "clean"
+}

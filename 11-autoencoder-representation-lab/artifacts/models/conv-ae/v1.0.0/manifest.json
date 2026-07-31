@@ -1,0 +1,39 @@
+{
+  "task": "deterministic image reconstruction",
+  "model_id": "conv-ae",
+  "model_type": "conv-ae",
+  "model_version": "v1.0.0",
+  "dataset": "FashionMNIST-shaped educational fixture",
+  "dataset_status": "fixture-not-fashionmnist",
+  "official_dataset_target": "FashionMNIST",
+  "source": "local deterministic generator",
+  "license": "project fixture",
+  "seed": 42,
+  "input_shape": [
+    null,
+    1,
+    28,
+    28
+  ],
+  "dtype": "float32",
+  "pixel_range": [
+    0.0,
+    1.0
+  ],
+  "latent_dim": 16,
+  "labels_used_for_autoencoder_training": false,
+  "device": "cpu",
+  "warning": "Fixture metrics validate software, not FashionMNIST performance.",
+  "state_sha256": "d65eea5f25e37b8446603a9d75409f3ef3014a7a802be6eafb89a4ad8e0d2765",
+  "required_files": [
+    "model_state.pt",
+    "model_config.json",
+    "preprocessing.json",
+    "metrics.json",
+    "reconstruction_metrics.json",
+    "representation_metrics.json",
+    "robustness_metrics.json",
+    "training_history.json",
+    "manifest.json"
+  ]
+}

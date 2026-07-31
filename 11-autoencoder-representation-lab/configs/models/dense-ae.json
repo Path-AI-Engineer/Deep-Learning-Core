@@ -1,0 +1,1 @@
+{"model_type":"dense-ae","latent_dim":16,"hidden_dims":[256,64],"output_activation":"sigmoid"}

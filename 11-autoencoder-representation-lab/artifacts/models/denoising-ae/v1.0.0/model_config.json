@@ -1,0 +1,9 @@
+{
+  "model_type": "denoising-ae",
+  "latent_dim": 16,
+  "input_shape": [
+    1,
+    28,
+    28
+  ]
+}

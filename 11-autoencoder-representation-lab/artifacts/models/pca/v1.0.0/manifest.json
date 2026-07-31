@@ -1,0 +1,8 @@
+{
+  "model_id": "pca",
+  "model_version": "v1.0.0",
+  "dataset_status": "fixture-not-fashionmnist",
+  "latent_dim": 16,
+  "fit_split": "fixture training only",
+  "warning": "Fixture evidence only."
+}

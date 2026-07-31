@@ -1,6 +1,126 @@
-# 11-autoencoder-representation-lab
+# Latent Representation Lab
 
-## 🧠 Descripción
+An inspectable reconstruction and representation-learning laboratory built around
+deterministic autoencoders. It reconstructs and denoises images, exposes a dedicated
+two-dimensional latent space, interpolates between samples, compares model families
+and makes the largest errors inspectable.
+
+The official learning target is FashionMNIST. The committed `v1.0.0` release uses a
+deterministic clothing-shaped fixture to validate the software without a download.
+Every fixture result is labelled and must not be presented as a FashionMNIST benchmark.
+
+## Product capabilities
+
+- Mean-image and PCA baselines.
+- Dense, convolutional, denoising and 2D-latent autoencoders.
+- MSE, MAE, PSNR and SSIM reconstruction evidence.
+- Frozen-embedding linear-probe evidence.
+- Gaussian and masking corruption with clean targets.
+- Reconstruction, upload inference, denoising, latent decoding and interpolation.
+- Model comparison, highest-error review and hash-validated bundles.
+- React laboratory delivered by a versioned FastAPI application.
+
+Labels are excluded from autoencoder optimization. They are used only after training
+for stratification, visual interpretation and linear-probe evaluation. Reconstruction
+quality, probe performance and latent geometry remain separate evidence families.
+
+## Architecture
+
+```text
+frontend/                 React + TypeScript laboratory
+backend/app/              FastAPI delivery and bundle registry
+src/autoencoder_lab/      Data, models, training, evaluation and inference
+scripts/                  Reproducible pipeline and validation entry points
+configs/                  Dataset, model, experiment and runtime contracts
+artifacts/                Versioned fixture bundles and comparison evidence
+tests/                    Unit, integration and API contract tests
+docs/                     Architecture, model card and operating guidance
+```
+
+Training stays outside the request path. The frontend consumes `/api/v1` contracts and
+does not contain model logic or embedded result data.
+
+## Run locally
+
+```powershell
+Set-Location "C:\JeanLoa\Path-AI-Engineer\Deep-Learning-Core\11-autoencoder-representation-lab"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+Set-Location frontend
+npm install
+npm run build
+Set-Location ..
+
+python scripts\bootstrap_fixture_bundles.py
+$env:PYTHONPATH = "$PWD\src;$PWD\backend"
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8011
+```
+
+Open `http://127.0.0.1:8011`; API documentation is at
+`http://127.0.0.1:8011/docs`.
+
+For Vite development, set `VITE_API_URL=http://127.0.0.1:8011/api/v1` and run
+`npm run dev` from `frontend`.
+
+## Official FashionMNIST workflow
+
+```powershell
+python scripts\download_data.py
+python scripts\prepare_data.py
+python scripts\train_model.py --model conv-ae
+python scripts\train_model.py --model denoising-ae
+python scripts\train_model.py --model latent-2d
+python scripts\evaluate_models.py
+```
+
+Official-data outputs are generated separately from the committed fixture release.
+
+## Quality gate
+
+```powershell
+python scripts\validate_project.py
+```
+
+## Cloud Run release package
+
+```powershell
+.\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"
+```
+
+Without `-Apply`, the command only reports the intended resources. An approved
+release builds the React/FastAPI image in Cloud Build, publishes it to
+Artifact Registry `plan-02`, deploys
+`ai-02-p11-latent-representation-lab` with a dedicated identity and verifies
+`/api/v1/health`. The frontend lockfile and versioned fixture artifacts are
+mandatory preflight inputs.
+
+## Scope limits
+
+This release does not implement variational autoencoders, GANs, diffusion models,
+anomaly detection, t-SNE, UMAP, authentication, persistent user storage or
+browser-triggered training. Uploads are processed in memory and are not retained.
+
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Data contract](docs/data-contract.md)
+- [Model card](docs/model-card.md)
+- [Evaluation protocol](docs/evaluation.md)
+- [API reference](docs/api.md)
+- [Operations](docs/operations.md)
+- [Limitations](docs/limitations.md)
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+<details>
+<summary>Original academic brief (superseded by the implemented scope)</summary>
+
+## Original description
 
 Lab técnico para construir **autoencoders** y entender representación, compresión y reconstrucción de datos.
 
@@ -323,3 +443,5 @@ La representación interna es el verdadero aprendizaje.
 Este proyecto no busca crear un modelo generativo avanzado todavía.
 
 Busca entender cómo una red puede aprender representaciones internas útiles.
+
+</details>

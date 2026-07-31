@@ -1,0 +1,7 @@
+{
+  "model_id": "mean-image",
+  "model_version": "v1.0.0",
+  "dataset_status": "fixture-not-fashionmnist",
+  "latent_dim": null,
+  "warning": "Fixture evidence only."
+}

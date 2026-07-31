@@ -1,0 +1,1 @@
+{"model_type":"conv-ae","latent_dim":16,"channels":[16,32],"output_activation":"sigmoid"}

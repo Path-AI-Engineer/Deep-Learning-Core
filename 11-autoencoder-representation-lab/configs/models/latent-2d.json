@@ -1,0 +1,1 @@
+{"model_type":"latent-2d","latent_dim":2,"channels":[16,32],"output_activation":"sigmoid"}

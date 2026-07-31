@@ -1,0 +1,1 @@
+{"sample_limit":48,"upload_bytes":1048576,"interpolation_steps_min":3,"interpolation_steps_max":12,"latent_point_limit":300,"neighbor_limit":8,"corruption_levels":[0.1,0.2,0.3],"seeds":[7,21,42]}
