@@ -19,7 +19,7 @@ from sequence_models.cells import cell_trace  # noqa: E402
 def main() -> None:
     required = (
         "README.md",
-        "Dockerfile",
+        "infra/docker/production.Dockerfile",
         "frontend/package-lock.json",
         "docs/model-card.md",
         "docs/data-contract.md",

@@ -40,6 +40,8 @@ param(
 $ErrorActionPreference = "Stop"
 $repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $projectRoot = Join-Path $repositoryRoot $ProjectDirectory
+$dockerfile = Join-Path $projectRoot "infra\docker\production.Dockerfile"
+$cloudBuildConfig = Join-Path $projectRoot "infra\gcp\cloudbuild.yaml"
 $remoteImage = "$Region-docker.pkg.dev/$ProjectId/$Repository/$ImageName`:$ImageTag"
 $serviceAccount = "$ServiceAccountName@$ProjectId.iam.gserviceaccount.com"
 
@@ -114,6 +116,7 @@ if ($SmokeOnly) {
 if (-not $Apply) {
     Write-Host "Plan only:"
     Write-Host "  Build context: $projectRoot"
+    Write-Host "  Dockerfile:    $dockerfile"
     Write-Host "  Image:         $remoteImage"
     Write-Host "  Service:       $ServiceName"
     Write-Host "  Health:        $HealthPath"
@@ -121,8 +124,11 @@ if (-not $Apply) {
     exit 0
 }
 
-if (-not (Test-Path (Join-Path $projectRoot "Dockerfile") -PathType Leaf)) {
-    throw "Dockerfile is missing from $projectRoot"
+if (-not (Test-Path $dockerfile -PathType Leaf)) {
+    throw "Production Dockerfile is missing from $dockerfile"
+}
+if (-not (Test-Path $cloudBuildConfig -PathType Leaf)) {
+    throw "Cloud Build configuration is missing from $cloudBuildConfig"
 }
 foreach ($relativePath in $PreflightPaths) {
     $requiredPath = Join-Path $projectRoot $relativePath
@@ -173,7 +179,8 @@ if (-not $SkipBuild) {
             "builds", "submit",
             "--project=$ProjectId",
             "--region=$Region",
-            "--tag=$remoteImage",
+            "--config=$cloudBuildConfig",
+            "--substitutions=_IMAGE=$remoteImage",
             "--quiet",
             "."
         )

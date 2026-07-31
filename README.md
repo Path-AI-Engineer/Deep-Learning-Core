@@ -189,8 +189,9 @@ Duración total aproximada:
 
 ## Estado de preparación para despliegue
 
-Cada producto web implementado debe conservar un Dockerfile reproducible y un
-wrapper de Cloud Run aunque no permanezca desplegado. Los Proyectos 07–12 usan
+Cada producto web implementado debe conservar su imagen reproducible en
+`infra/docker/` y su wrapper de Cloud Run en `infra/gcp/`, aunque no permanezca
+desplegado. Los Proyectos 07–12 usan
 Artifact Registry `plan-02` y nombres semánticos `ai-02-pXX-*`.
 
 | Proyecto | Estado del paquete |

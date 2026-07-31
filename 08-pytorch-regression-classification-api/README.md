@@ -84,7 +84,7 @@ python scripts\smoke_test.py --base-url http://127.0.0.1:8008
 ## Docker
 
 ```powershell
-docker build -t pytorch-tabular-studio:v1.0.0 .
+docker build --file infra/docker/production.Dockerfile -t pytorch-tabular-studio:v1.0.0 .
 docker run --rm -p 8080:8080 --name pytorch-tabular-studio pytorch-tabular-studio:v1.0.0
 python scripts\smoke_test.py --base-url http://127.0.0.1:8080
 ```

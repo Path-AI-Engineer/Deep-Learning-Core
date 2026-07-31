@@ -92,7 +92,7 @@ The API never trains a model during a request. It loads validated bundles with `
 ## Docker
 
 ```powershell
-docker build -t sequence-memory-lab:v1.0.0 .
+docker build --file infra/docker/production.Dockerfile -t sequence-memory-lab:v1.0.0 .
 docker run --rm -p 8080:8080 sequence-memory-lab:v1.0.0
 ```
 

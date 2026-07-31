@@ -32,7 +32,7 @@ reviewed and versioned.
 
 ```powershell
 python scripts\validate_project.py
-docker build -t latent-representation-lab:v1.0.0 .
+docker build --file infra/docker/production.Dockerfile -t latent-representation-lab:v1.0.0 .
 docker run --rm -p 8011:8080 latent-representation-lab:v1.0.0
 ```
 

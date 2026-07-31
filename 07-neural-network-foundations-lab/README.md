@@ -49,8 +49,9 @@ trace, compare decision boundaries and execute NumPy/PyTorch parity.
 
 ### Cloud Run release package
 
-The non-root `Dockerfile` exposes the Streamlit health contract on the Cloud Run
-`PORT`. Review the deployment plan without changing GCP:
+The non-root `infra/docker/production.Dockerfile` exposes the Streamlit health
+contract on the Cloud Run `PORT`. Review the deployment plan without changing
+GCP:
 
 ```powershell
 .\infra\gcp\release.ps1 -ProjectId "jeanloa-ai-engineer"

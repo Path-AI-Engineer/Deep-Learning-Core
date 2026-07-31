@@ -1,4 +1,9 @@
-# 12-transformer-architecture-foundations-lab
+# Superseded project placeholder
+
+The implemented Project 12 now lives in
+`../12-transformer-from-architecture-foundations-lab/`, matching the approved map.
+
+# Archived outline: 12-transformer-architecture-foundations-lab
 
 ## 🧠 Descripción
 

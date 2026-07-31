@@ -113,7 +113,7 @@ The production image compiles React and serves the SPA and API from one Cloud Ru
 service:
 
 ```powershell
-docker build -t transformer-architecture-lab:v1.0.0 .
+docker build --file infra/docker/production.Dockerfile -t transformer-architecture-lab:v1.0.0 .
 docker run --rm -p 8080:8080 transformer-architecture-lab:v1.0.0
 ```
 
