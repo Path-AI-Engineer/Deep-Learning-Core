@@ -1,0 +1,7 @@
+{
+  "attention_matrix_side": 8,
+  "max_new_tokens": 28,
+  "max_source_tokens": 24,
+  "trace_top_k": 5
+}
+

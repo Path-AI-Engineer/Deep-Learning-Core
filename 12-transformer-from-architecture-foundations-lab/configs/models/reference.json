@@ -1,0 +1,14 @@
+{
+  "activation": "gelu",
+  "d_ff": 128,
+  "d_model": 48,
+  "decoder_layers": 2,
+  "dropout": 0.0,
+  "encoder_layers": 2,
+  "max_length": 32,
+  "normalization": "post",
+  "num_heads": 4,
+  "positional_encoding": "sinusoidal",
+  "vocabulary_size": 39
+}
+

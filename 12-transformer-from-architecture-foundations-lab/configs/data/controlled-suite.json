@@ -1,0 +1,19 @@
+{
+  "name": "Controlled Sequence Transduction Suite",
+  "version": "1.0.0",
+  "seed": 1200,
+  "tasks": ["copy", "reverse", "recall"],
+  "train": {
+    "copy_reverse_lengths": [5, 16],
+    "recall_pairs": [2, 6]
+  },
+  "validation_ood": {
+    "copy_reverse_lengths": [17, 20],
+    "recall_pairs": [7, 8]
+  },
+  "test_ood": {
+    "copy_reverse_lengths": [21, 24],
+    "recall_pairs": [9, 10]
+  }
+}
+

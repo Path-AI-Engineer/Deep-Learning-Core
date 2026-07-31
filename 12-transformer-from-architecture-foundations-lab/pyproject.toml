@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transformer-architecture-foundations-lab"
+version = "1.0.0"
+description = "Inspectable encoder-decoder Transformer built from PyTorch primitives."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.116.1",
+  "numpy==1.26.4",
+  "pydantic==2.11.7",
+  "torch==2.9.0",
+  "uvicorn==0.35.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 96
+target-version = "py312"
+exclude = ["frontend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/bootstrap_reference_bundle.py" = ["E402"]
+"scripts/build_paper_assets.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["transformer_lab", "backend.app"]
+mypy_path = ["src", "."]

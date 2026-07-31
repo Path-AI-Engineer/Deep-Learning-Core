@@ -187,6 +187,24 @@ Duración total aproximada:
 22 semanas
 ```
 
+## Estado de preparación para despliegue
+
+Cada producto web implementado debe conservar un Dockerfile reproducible y un
+wrapper de Cloud Run aunque no permanezca desplegado. Los Proyectos 07–12 usan
+Artifact Registry `plan-02` y nombres semánticos `ai-02-pXX-*`.
+
+| Proyecto | Estado del paquete |
+|---|---|
+| 07 | Streamlit en un contenedor no-root |
+| 08 | React compilado y servido por FastAPI |
+| 09 | Pipeline listo; exige bundle y galería FashionMNIST oficiales |
+| 10 | React/FastAPI con bundles RNN, LSTM y GRU |
+| 11 | React/FastAPI con artefactos de representación versionados |
+| 12 | React/FastAPI con Transformer manual y bundle de validación verificable |
+
+Cada `infra/gcp/release.ps1` es no-mutante sin `-Apply`, crea una imagen con
+Cloud Build, usa una identidad dedicada, escala a cero y ejecuta un smoke test.
+
 ---
 
 # 📁 Proyectos del Plan 2

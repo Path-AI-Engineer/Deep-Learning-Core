@@ -1,0 +1,83 @@
+{
+  "data_manifest": {
+    "name": "Controlled Sequence Transduction Suite",
+    "status": "validation_only",
+    "test_status": "frozen_not_opened",
+    "train_examples": 768,
+    "train_lengths": {
+      "copy_reverse": [
+        5,
+        16
+      ],
+      "recall_pairs": [
+        2,
+        6
+      ]
+    },
+    "validation_id_examples": 126,
+    "validation_ood_examples": 75,
+    "validation_ood_lengths": {
+      "copy_reverse": [
+        17,
+        20
+      ],
+      "recall_pairs": [
+        7,
+        8
+      ]
+    },
+    "version": "1.0.0"
+  },
+  "evidence_status": "reference_validation",
+  "metrics": {
+    "generalization_gap_exact_match": -0.025,
+    "status": "reference_validation",
+    "validation_id": {
+      "count": 24,
+      "exact_match": 0.041666666666666664,
+      "token_accuracy": 0.24350149782135078
+    },
+    "validation_ood": {
+      "count": 15,
+      "exact_match": 0.06666666666666667,
+      "token_accuracy": 0.25729601782233363
+    }
+  },
+  "per_task": {
+    "validation_id": {
+      "copy": {
+        "count": 8,
+        "exact_match": 0.0,
+        "token_accuracy": 0.11383782679738562
+      },
+      "recall": {
+        "count": 8,
+        "exact_match": 0.125,
+        "token_accuracy": 0.5625
+      },
+      "reverse": {
+        "count": 8,
+        "exact_match": 0.0,
+        "token_accuracy": 0.05416666666666667
+      }
+    },
+    "validation_ood": {
+      "copy": {
+        "count": 5,
+        "exact_match": 0.0,
+        "token_accuracy": 0.0932748538011696
+      },
+      "recall": {
+        "count": 5,
+        "exact_match": 0.2,
+        "token_accuracy": 0.6
+      },
+      "reverse": {
+        "count": 5,
+        "exact_match": 0.0,
+        "token_accuracy": 0.07861319966583125
+      }
+    }
+  },
+  "source_bundle": "v1.0.0"
+}
