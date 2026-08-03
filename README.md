@@ -179,7 +179,7 @@ Ejemplo:
 | 34-37  | `09-cnn-foundations-image-classifier`      | Construir una CNN básica para imágenes               |
 | 38-40  | `10-sequence-models-rnn-lstm-lab`          | Entender modelos secuenciales                        |
 | 41-44  | `11-autoencoder-representation-lab`        | Aprender representación y reconstrucción             |
-| 45-49  | `12-transformer-from-scratch-mini-lab`     | Implementar un Transformer pequeño desde fundamentos |
+| 45-49  | `12-transformer-from-architecture-foundations-lab` | Implementar un Transformer pequeño desde fundamentos |
 
 Duración total aproximada:
 
